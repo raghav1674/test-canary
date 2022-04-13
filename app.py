@@ -4,6 +4,9 @@ from flask import Flask,request
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return "Canary Token"
 
 @app.route("/canary/web",methods=['GET','POST'])
 def web_canary():
